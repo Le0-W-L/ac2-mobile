@@ -2,18 +2,51 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textViewTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Minhas Finanças"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="315dp"
+        android:layout_height="603dp"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAdd"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/textViewTitulo" />
+
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Adicionar Gasto"
+        app:layout_constraintTop_toBottomOf="@id/listView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonResumo"
+        android:layout_margin="8dp"/>
+
+    <Button
+        android:id="@+id/buttonResumo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Resumo"
+        app:layout_constraintTop_toBottomOf="@id/listView"
+        app:layout_constraintStart_toEndOf="@id/buttonAdd"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="8dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
