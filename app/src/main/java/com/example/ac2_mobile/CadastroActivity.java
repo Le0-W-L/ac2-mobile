@@ -29,7 +29,7 @@ public class CadastroActivity extends AppCompatActivity {
         buttonSalvar = findViewById(R.id.buttonSalvar);
         helper = new BancoHelper(this);
 
-        String[] categorias = {"Alimentação", "Transporte", "Lazer", "Investimento", "Outros"};
+        String[] categorias = {"Alimentação", "Transporte", "Lazer", "Investimento", "Higiene", "Casa", "Educação", "Saúde", "Outros"};
         spinnerCategoria.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, categorias));
 
         buttonSalvar.setOnClickListener(v -> {
